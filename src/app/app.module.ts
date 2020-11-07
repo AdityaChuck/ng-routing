@@ -1,18 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
+//services
+import { FetchUsersService } from './fetch-users.service'
+import { FetchAlbumsService } from './fetch-albums.service'
+
+import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+
+ 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    routingComponents,
+    PageNotFoundComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [FetchUsersService, FetchAlbumsService],
   bootstrap: [AppComponent]
-})
+}) 
 export class AppModule { }

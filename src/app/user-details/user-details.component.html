@@ -1,0 +1,27 @@
+<table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th colspan="2" class="text-center text-light ">
+                Table for UserId - {{userDetails.id}}
+            </th>
+        </tr>
+        <tr>
+            <th class="text-light">Title</th>
+            <th class="text-light">Body</th>
+        </tr>
+    </thead>
+    <tbody *ngFor = "let detail of userDetails.details" >
+        <tr>
+            <td>
+                {{detail.title}}
+            </td>
+            <td>
+                {{detail.body}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="text-center">
+    <button class="btn btn-warning btn-lg" (click)="goBack()" >Go Back</button>
+</div>
+<div class="mt-5"></div>

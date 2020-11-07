@@ -1,0 +1,27 @@
+<table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th colspan="3" class="text-center text-light ">
+               Albums Table
+            </th>
+        </tr>
+        <tr>
+            <th class="text-light">UserId</th>
+            <th class="text-light">Id</th>
+            <th class="text-light">Title</th>
+        </tr>
+    </thead>
+    <tbody *ngFor = "let album of albums" >
+        <tr>
+            <td>
+                {{album.userId}}
+            </td>
+            <td>
+                {{album.id}}
+            </td>
+            <td>
+                {{album.title}}
+            </td>
+        </tr>
+    </tbody>
+</table>
